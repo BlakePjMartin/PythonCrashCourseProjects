@@ -1,2 +1,3 @@
 SET curPth=%cd%
-python "%curPth%/src/alien_invasion.py"
+cd "%curPth%/src
+python alien_invasion.py
