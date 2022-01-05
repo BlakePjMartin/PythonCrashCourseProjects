@@ -55,7 +55,8 @@ class AlienInvasion:
         elif event.key == pygame.K_q:
             sys.exit()
         elif event.key == pygame.K_SPACE:
-            self._fire_bullet()
+            if len(self.bullets) < self.settings.bullets_allowed:
+                self._fire_bullet()
 
     def _check_keyup_events(self, event):
         """Respond to key releases."""
