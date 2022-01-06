@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Alien(Sprite):
     """A class to represent a single alien in the fleet."""
 
@@ -28,6 +29,6 @@ class Alien(Sprite):
             return True
 
     def update(self):
-        """Move the alien to the right."""
-        self.x += self.settings.alien_speed
+        """Move the alien left or right."""
+        self.x += self.settings.fleet_direction * self.settings.alien_speed
         self.rect.x = self.x
